@@ -15,7 +15,7 @@ jobs:
       matrix:
         include:
           - subject: Plain body (attachment)
-            attachments: action.yml
+            attachments: ./testdata/subject.txt
             body: |
               first line
               second line
