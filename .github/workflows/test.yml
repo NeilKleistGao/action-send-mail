@@ -56,7 +56,7 @@ jobs:
           from: github-actions
           attachments: ${{matrix.attachments}}
           convert_markdown: ${{matrix.convert_markdown}}
-          priority: high
+          priority: normal
 
   url-test:
     runs-on: ubuntu-latest
@@ -71,5 +71,5 @@ jobs:
           body: |
             first line
             second line
-          to: ${{github.event.pusher.email}}
+          to: ${{secrets.USERNAME}}
           from: github-actions
