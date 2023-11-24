@@ -15,7 +15,7 @@ jobs:
       matrix:
         include:
           - subject: Plain body (attachment)
-            attachments: ./testdata/subject.txt
+            attachments: ./testdata/foo.txt
             body: |
               first line
               second line
