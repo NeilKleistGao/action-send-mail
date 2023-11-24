@@ -34,7 +34,10 @@ function getFrom(from, username) {
 async function getAttachments(attachments) {
     const globber = await glob.create(attachments.split(',').join('\n'))
     const files = await globber.glob()
-    return files.map(f => ({ filename: path.basename(f), path: f, cid: f.replace(/^.*[\\\/]/, '')}))
+    return files.map(f => {
+        console.log(f)
+        return ({ filename: path.basename(f), path: f, cid: f.replace(/^.*[\\\/]/, '')})
+    })
 }
 
 async function main() {
